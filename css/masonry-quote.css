@@ -24,7 +24,7 @@
 
 .masonry .entry {
     margin-bottom: 40px;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 1);
 }
 
 .masonry .entry__thumb {
@@ -40,7 +40,7 @@
 .masonry .entry__thumb-link::before {
     content: "";
     display: block;
-    background: rgba(21, 21, 21, 0.6);
+    background: rgba(21, 21, 21, 1);
     opacity: 0;
     visibility: hidden;
     position: absolute;
