@@ -235,7 +235,7 @@
         font-size: 1.5rem;
         font-style: normal;
         line-height: 1.6;
-        color: rgba(0, 0, 0, 0.4);
+        color: rgba(0, 0, 0, 1);
     }
 
         .format-quote cite::before,
