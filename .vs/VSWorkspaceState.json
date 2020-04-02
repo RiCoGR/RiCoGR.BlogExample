@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\css",
-    "\\images"
+    "\\images",
+    "\\images\\resources"
   ],
-  "SelectedNode": "\\page-contact.html",
+  "SelectedNode": "\\css\\button.css",
   "PreviewInSolutionExplorer": false
 }

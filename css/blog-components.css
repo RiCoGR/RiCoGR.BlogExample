@@ -1,0 +1,275 @@
+
+/* ===================================================================
+ * # blog styles and blog components
+ *
+ * ------------------------------------------------------------------- */
+.entry__media,
+.entry__post-thumb {
+    position: relative;
+}
+
+/* -------------------------------------------------------------------
+ * ## entry header meta
+ * ------------------------------------------------------------------- */
+.entry__header-meta {
+    list-style: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.778;
+    margin-left: 0;
+    color: #000000;
+}
+
+    .entry__header-meta li {
+        display: inline-block;
+        padding-left: 0;
+        margin: 0 0.8rem;
+    }
+
+    .entry__header-meta a {
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+        .entry__header-meta a:hover,
+        .entry__header-meta a:focus {
+            color: #000000;
+        }
+
+    .entry__header-meta .cat-links a::after {
+        content: ", ";
+    }
+
+    .entry__header-meta .cat-links a:last-child::after {
+        display: none;
+    }
+
+/* -------------------------------------------------------------------
+ * ## post tags
+ * ------------------------------------------------------------------- */
+.entry__tags {
+    margin-top: 6rem;
+    font-family: "Heebo", sans-serif;
+}
+
+    .entry__tags span {
+        font-weight: 500;
+        color: #000000;
+        padding-right: 56px;
+        margin-right: 1.6rem;
+        position: relative;
+    }
+
+        .entry__tags span::after {
+            display: inline-block;
+            content: "";
+            height: 1px;
+            width: 40px;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+
+    .entry__tags .entry__tag-list {
+        display: inline-block;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+        .entry__tags .entry__tag-list::after {
+            display: none;
+        }
+
+        .entry__tags .entry__tag-list a {
+            display: inline-block;
+            font-weight: 400;
+            font-size: 1.3rem;
+            line-height: inherit;
+            color: #1a1a1a;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+            margin-right: 6px;
+            margin-bottom: 8px;
+            padding: 1px 12px;
+        }
+
+            .entry__tags .entry__tag-list a:hover,
+            .entry__tags .entry__tag-list a:focus {
+                background-color: #000000;
+                border-color: #000000;
+                color: #ffffff;
+            }
+
+            .entry__tags .entry__tag-list a:last-child {
+                margin-right: 0;
+            }
+
+/* -------------------------------------------------------------------
+ * ## blog single page navigation
+ * ------------------------------------------------------------------- */
+.entry__pagenav {
+    margin-top: 10.2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.entry__nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.entry__nav span {
+    display: block;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #1a1a1a;
+    margin-bottom: 1.6rem;
+    transition: all 0.3s;
+}
+
+.entry__nav a {
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.333;
+    color: #000000;
+}
+
+    .entry__nav a:hover span,
+    .entry__nav a:focus span {
+        color: #33998a;
+    }
+
+.entry__prev,
+.entry__next {
+    width: 50%;
+    float: left;
+    padding-right: 2rem;
+}
+
+/* -------------------------------------------------------------------
+ * ## related articles
+ * ------------------------------------------------------------------- */
+.entry__related {
+    margin-top: 10.2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+    .entry__related h3 {
+        margin-top: 0;
+        margin-bottom: 3.2rem;
+    }
+
+    .entry__related h5 {
+        margin-top: 0.8rem;
+        font-size: 1.9rem;
+        font-weight: 400;
+        line-height: 2.8rem;
+        white-space: nowrap;
+    }
+
+.related {
+    list-style: none;
+    margin-left: -4rem;
+}
+
+.related__item {
+    float: left;
+    width: 33.33333%;
+    padding-left: 4rem;
+    margin-bottom: 3.2rem;
+}
+
+.related__link {
+    display: block;
+    position: relative;
+}
+
+    .related__link img {
+        vertical-align: bottom;
+        width: 300px;
+        object-fit: cover;
+        height: 160px;
+    }
+
+    .related__link::before {
+        content: "";
+        display: block;
+        background: rgba(255, 255, 255, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s;
+    }
+
+    .related__link:hover::before {
+        opacity: 1;
+        visibility: visible;
+    }
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * blog styles and blog components
+ * ------------------------------------------------------------------- */
+@media screen and (max-width:800px) {
+    .entry__header-meta {
+        font-size: 1.7rem;
+    }
+
+    .entry__prev,
+    .entry__next {
+        width: auto;
+        float: none;
+        padding-right: 0;
+    }
+
+    .entry__nav [class*="entry__"] + [class*="entry__"] {
+        margin-top: 2rem;
+    }
+
+    .related {
+        margin-left: -4.4rem;
+    }
+
+    .related__item {
+        padding-left: 4.4rem;
+        width: 50%;
+    }
+
+        .related__item:nth-child(2n + 1) {
+            clear: both;
+        }
+}
+
+@media screen and (max-width:600px) {
+    .related {
+        margin-left: -2rem;
+    }
+
+    .related__item {
+        padding-left: 2rem;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .related {
+        margin-left: 0;
+    }
+
+    .related__item {
+        float: none;
+        width: auto;
+        padding-left: 0;
+    }
+}
