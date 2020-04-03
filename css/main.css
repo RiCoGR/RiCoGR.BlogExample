@@ -793,3 +793,11 @@ label > input[type="radio"] {
 .font-style-italic {
     font-style: italic;
 }
+
+p.font-weight-bold{
+    font-weight: bold;
+}
+
+p.text-underline {
+    text-decoration: underline;
+}
